@@ -1,16 +1,18 @@
 import os
 from flask import Flask
 if os.path.exists("env.py"):
-    import env 
+    import env
+
 
 app = Flask(__name__)
 
+
 @app.route("/")
 def hello():
-    return "Hellow World.... again!"
+    return "Hello World ... again!"
 
 
-if __name__ == "__name__":
+if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
-            port=int(host.os.environ.get("PORT")),
+            port=int(os.environ.get("PORT")),
             debug=True)
