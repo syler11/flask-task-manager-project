@@ -10,4 +10,5 @@
         done: "Select"
       }
     });
+    $('select').formSelect();
   });
